@@ -73,3 +73,50 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 Nest is [MIT licensed](LICENSE).
 
 # Pemilu_Survey_Apps-Project_API-NestJS
+
+## Intall Nest JS
+
+
+```bash
+# install global nest cli
+$ npm i -g @nestjs/cli
+
+# create project
+$ nest new .
+```
+
+## install module :
+
+```bash
+nest g module [name_file]
+```
+
+## install controller :
+
+```bash
+# with spec
+nest g controller [name_file]
+# no spec
+nest g controller [name_file] --no-spec
+```
+
+## install service :
+
+```bash
+# with spec
+nest g service [name_file]
+# no spec
+nest g service [name_file] --no-spec
+```
+
+# Install lib DTO
+
+## install Validation :
+```bash
+npm i --save class-validator class-transformer
+```
+
+## install mapping type :
+```bash
+npm install --save @nestjs/mapped-types
+```
