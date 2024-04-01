@@ -20,14 +20,6 @@ export class StatusActivatedService {
         return statusActivated;
     }
 
-    async findOne(id: number): Promise<StatusActivated> {
-        const statusActivated = await this.statusActivatedRepository.findOneBy({ id });
-        if (!statusActivated) {
-            throw new NotFoundException(`Status Activated with ID "${id}" not found`);
-        }
-        return statusActivated;
-    }
-
     async findAllBySearch(search?: string): Promise<StatusActivated[]> {
         const queryBuilder = this.statusActivatedRepository.createQueryBuilder('statusActivated');
         if (search) {
@@ -36,6 +28,14 @@ export class StatusActivatedService {
         const statusActivated = await queryBuilder.getMany();
         if (!statusActivated || statusActivated.length === 0) {
             throw new NotFoundException(`Status Activated not found`);
+        }
+        return statusActivated;
+    }
+
+    async findOne(id: number): Promise<StatusActivated> {
+        const statusActivated = await this.statusActivatedRepository.findOneBy({ id });
+        if (!statusActivated) {
+            throw new NotFoundException(`Status Activated with ID "${id}" not found`);
         }
         return statusActivated;
     }

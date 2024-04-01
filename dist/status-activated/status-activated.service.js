@@ -28,13 +28,6 @@ let StatusActivatedService = class StatusActivatedService {
         }
         return statusActivated;
     }
-    async findOne(id) {
-        const statusActivated = await this.statusActivatedRepository.findOneBy({ id });
-        if (!statusActivated) {
-            throw new common_1.NotFoundException(`Status Activated with ID "${id}" not found`);
-        }
-        return statusActivated;
-    }
     async findAllBySearch(search) {
         const queryBuilder = this.statusActivatedRepository.createQueryBuilder('statusActivated');
         if (search) {
@@ -43,6 +36,13 @@ let StatusActivatedService = class StatusActivatedService {
         const statusActivated = await queryBuilder.getMany();
         if (!statusActivated || statusActivated.length === 0) {
             throw new common_1.NotFoundException(`Status Activated not found`);
+        }
+        return statusActivated;
+    }
+    async findOne(id) {
+        const statusActivated = await this.statusActivatedRepository.findOneBy({ id });
+        if (!statusActivated) {
+            throw new common_1.NotFoundException(`Status Activated with ID "${id}" not found`);
         }
         return statusActivated;
     }
