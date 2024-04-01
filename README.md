@@ -74,8 +74,12 @@ Nest is [MIT licensed](LICENSE).
 
 # Pemilu_Survey_Apps-Project_API-NestJS
 
-## Intall Nest JS
+## install config :
+```bash
+npm i --save @nestjs/config
+```
 
+## Intall Nest JS
 
 ```bash
 # install global nest cli
