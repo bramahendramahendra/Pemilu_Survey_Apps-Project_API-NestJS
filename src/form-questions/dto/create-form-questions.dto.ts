@@ -8,7 +8,7 @@ export class CreateFormQuestionsDto {
     })
     @IsString()
     @MinLength(1)
-    answer: string;
+    question: string;
 
     @ApiProperty({ 
         example: 1, 

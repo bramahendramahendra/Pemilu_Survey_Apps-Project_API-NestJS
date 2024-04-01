@@ -11,6 +11,14 @@ export class CreateRespondentAnswersDto {
     id_respondents: number;
 
     @ApiProperty({
+        example: 1,
+        required: true
+    })
+    @IsInt()
+    @Min(1)
+    id_surveyors: number;
+
+    @ApiProperty({
         example: 2,
         required: true
     })
@@ -28,7 +36,7 @@ export class CreateRespondentAnswersDto {
 
     @ApiProperty({ 
         example: 1, 
-        required: true 
+        required: false 
     })
     @IsInt()
     @Min(1)

@@ -5,6 +5,7 @@ import { FormAnswersModule } from './form_answers/form_answers.module';
 import { FormQuestionsModule } from './form_questions/form_questions.module';
 import { RespondentAnswersModule } from './respondent_answers/respondent_answers.module';
 import { RespondentsModule } from './respondents/respondents.module';
+import { SurveyorsModule } from './surveyors/surveyors.module';
 import { StatusActivatedModule } from './status-activated/status-activated.module';
 import { StatusActivatedModule } from './status_activated/status_activated.module';
 import { FormQuestionsModule } from './form-questions/form-questions.module';
@@ -13,7 +14,7 @@ import { RespondentAnswersModule } from './respondent-answers/respondent-answers
 import { RespondentsModule } from './respondents/respondents.module';
 
 @Module({
-  imports: [FormAnswersModule, FormQuestionsModule, RespondentAnswersModule, RespondentsModule, StatusActivatedModule],
+  imports: [FormAnswersModule, FormQuestionsModule, RespondentAnswersModule, RespondentsModule, StatusActivatedModule, SurveyorsModule],
   controllers: [AppController],
   providers: [AppService],
 })

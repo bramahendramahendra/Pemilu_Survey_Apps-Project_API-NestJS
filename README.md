@@ -109,6 +109,12 @@ nest g service [name_file]
 nest g service [name_file] --no-spec
 ```
 
+## install database :
+
+```bash
+npm install --save @nestjs/typeorm typeorm mysql2
+```
+
 # Install lib DTO
 
 ## install Validation :

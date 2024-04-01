@@ -2,6 +2,14 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsInt, IsString, Max, MaxLength, Min, MinLength } from 'class-validator';
 
 export class CreateFormAnswersDto {
+    @ApiProperty({
+        example: 1,
+        required: true
+    })
+    @IsInt()
+    @Min(1)
+    id_form_questions: number;
+
     @ApiProperty({ 
         example: 'Partai',
         required: true 
@@ -30,7 +38,7 @@ export class CreateFormAnswersDto {
 
     @ApiProperty({ 
         example: 1, 
-        required: true 
+        required: false 
     })
     @IsInt()
     @Min(1)

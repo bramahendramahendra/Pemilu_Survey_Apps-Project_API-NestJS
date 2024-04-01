@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
-@Entity('status_activated')
-export class StatusActivated {
+@Entity('surveyors')
+export class Surveyors {
     @PrimaryGeneratedColumn({
         type: 'int',
         unsigned: true,
@@ -10,13 +10,30 @@ export class StatusActivated {
 
     @Column({
         type: 'varchar',
-        length: 15, 
+        length: 100,
         charset: 'utf8mb4',
         collation: 'utf8mb4_unicode_ci',
         nullable: true,
         default: null
     })
-    status: string;
+    nama: string;
+
+    @Column({
+        type: 'varchar',
+        length: 20,
+        charset: 'utf8mb4',
+        collation: 'utf8mb4_unicode_ci',
+        nullable: true,
+        default: null
+    })
+    referral_code: string;
+
+    @Column({
+        type: 'tinyint',
+        nullable: true,
+        default: null
+    })
+    jumlah_respondents: number;
 
     @CreateDateColumn({
         type: 'timestamp',
